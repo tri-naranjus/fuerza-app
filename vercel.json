@@ -1,0 +1,14 @@
+{
+  // Configuración para Vercel que permite incrustar la aplicación en un iframe.
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'self' https://tri-naranjus.com https://*.tri-naranjus.com"
+        }
+      ]
+    }
+  ]
+}
