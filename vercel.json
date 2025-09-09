@@ -1,5 +1,4 @@
 {
-  // Configuración para Vercel que permite incrustar la aplicación en un iframe.
   "headers": [
     {
       "source": "/(.*)",
