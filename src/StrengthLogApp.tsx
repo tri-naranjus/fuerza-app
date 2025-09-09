@@ -342,12 +342,9 @@ export default function StrengthLogApp() {
                       }}/>
                     </td>
                   ))}
-                  <td className="p-2"><Input value={e.rpe||''} onChange={(ev)=>updateEntry(e.id,{rpe:(ev.target as HTMLInputElement).value})}/></td>
-                  <td className="p-2"><Input value={e.notes||''} onChange={(ev)=>updateEntry(e.id,{notes:(ev.target as HTMLInputElement).value})}/></td>
-                  <td className="p-2" style={{minWidth:140}}>
-                    <Progress value={completionPct(e)} />
-                  </td>
-                  <td className="p-2 whitespace-nowrap">
+ <td className="p-2" style={{minWidth:140}}>
+  <Progress value={completionPct(e)} />
+</td>           <td className="p-2 whitespace-nowrap">
                     <Button className="bg-gray-100 text-gray-800 mr-2" onClick={()=>navigator.clipboard.writeText(JSON.stringify(e,null,2))}>Copiar</Button>
                     <Button className="bg-red-600" onClick={()=>removeEntry(e.id)}>Borrar</Button>
                   </td>
